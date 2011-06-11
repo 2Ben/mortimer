@@ -1,6 +1,6 @@
 <!-- #content_body -->
 <div id="content_body">
-	<h1>Users</h1>
+	<h1><%= t("users") %></h1>
 	
 	<table cellspacing="0" summary="This is a listing of all users within the system" class="common">
 		<caption><span class="hidden">Current Users</span></caption>
@@ -11,8 +11,8 @@
 		</colgroup>
 		<thead>
 			<tr>
-				<th>Name</th>
-				<th colspan="2">Login</th>
+				<th><%= t("name") %></th>
+				<th colspan="2"><%= t("login") %></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -20,7 +20,7 @@
 			<tr <%= "class='admin'" if user.is_admin? %>>
 				<td class="first"><%= user.full_name %></td> 
 				<td><%= user.login %></td>
-				<td><a href="<%= edit_user_path(user) %>" title="edit user <%= user.login %>">edit</a></td>
+				<td><a href="<%= edit_user_path(user) %>" title="edit user <%= user.login %>"><%= t("edit") %></a></td>
 			</tr>
 			<% end %>
 		</tbody>
@@ -36,7 +36,7 @@
 		<div id="menu" class="module_box">
 			<div class="module_content">
 				<ul class="listing_common">
-					<li class="last"><a href="<%= new_user_url %>" class="icon add">Add user</a></li>
+					<li class="last"><a href="<%= new_user_url %>" class="icon add"><%= t("add_user") %></a></li>
 				</ul>
 			</div>
 		</div>

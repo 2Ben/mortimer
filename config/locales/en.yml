@@ -2,4 +2,22 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  passwords: Passwords
+  password: Password
+  add_entry: Add Entry
+  add_group: Add Group
+  users: Users
+  add_user: Add user
+  edit: edit
+  delete: delete
+  account: Account
+  logout: Logout
+  logged_in_as: Logged in as
+  name: Name
+  login: Login
+  first_name: First Name
+  last_name: Last Name
+  password_again: Password again
+  user_edit_form: User Edit Form
+  edit_account: Edit Account
+  create_new_user: Create a new user

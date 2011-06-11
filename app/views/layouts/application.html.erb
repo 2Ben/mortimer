@@ -38,8 +38,8 @@
 					<!-- #nav_utility -->
 					<div id="nav_utility" class="clear">
 						<ul class="clear">
-							<li>Logged in as <em><%= current_user.login %></em></li>
-							<li class="last"><a href="/logout">Logout</a></li>
+							<li><%= t("logged_in_as") %> <em><%= current_user.login %></em></li>
+							<li class="last"><a href="/logout"><%= t("logout") %></a></li>
 						</ul>
 					</div>
 					<!-- /#nav_utility -->

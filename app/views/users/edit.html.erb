@@ -13,7 +13,7 @@
 	<div id="edit_user">
 
 		<ul class="toggle clear">
-			<li class="active"><a href="#"><span>Edit Account</span></a></li>
+			<li class="active"><a href="#"><span><%= t("edit_account") %></span></a></li>
 			<% if current_user.is_admin? && !@user.is_admin? %>
 			<li><a href="#"><span>Permissions</span></a></li>
 			<% end %>

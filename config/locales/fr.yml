@@ -1,0 +1,20 @@
+fr:
+  passwords: Mots de passe
+  password: Mot de passe
+  add_entry: Ajouter un mot de passe
+  add_group: Ajouter un groupe
+  users: Utilisateurs
+  add_user: Ajouter un utilisateur
+  edit: modifier
+  delete: supprimer
+  account: Compte
+  logout: Se déconnecter
+  logged_in_as: Connectez en
+  name: Nom
+  login: Login
+  first_name: Prénom
+  last_name: Nom
+  password_again: Encore
+  user_edit_form: Edition du profil
+  edit_account: Edition du profil
+  create_new_user: Créer un utilisateur

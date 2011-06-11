@@ -1,6 +1,6 @@
 <!-- #content_body -->
 <div id="content_body">
-	<h1>Passwords</h1>
+	<h1><%= t("passwords") %></h1>
   <%= render :partial => "groups/group.html.erb", :locals => {:groups => @groups, :parent_group => nil, :level => 0, } %>
 </div>
 <!-- /#content_body -->
@@ -15,9 +15,9 @@
       <div class="module_content">
         <ul class="listing_common">
           <% unless @groups.blank? %>
-          <li><a href="<%= new_entry_url %>" class="icon add">Add Entry</a></li>
+          <li><a href="<%= new_entry_url %>" class="icon add"><%= t("add_entry") %></a></li>
           <% end %>  
-          <li class="last"><a href="<%= new_group_url %>" class="icon add">Add Group</a></li>
+          <li class="last"><a href="<%= new_group_url %>" class="icon add"><%= t("add_group") %></a></li>
         </ul>
       </div>
     </div>
