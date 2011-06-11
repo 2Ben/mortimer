@@ -5,3 +5,5 @@ tmp/**/*
 doc/api
 doc/app
 config/database.yml
+.idea/*
+config/initializers/site_keys.rb
