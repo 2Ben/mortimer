@@ -2,22 +2,22 @@
 	<legend class="hidden"><span class="hidden">Create Entry Form</span></legend>
 	
 	<div class="field text">
-		<label for="entry_title">Title:</label>
+		<label for="entry_title"><%= t("title") %>:</label>
 		<input id="entry_title" name="entry[title]" value="<%= @entry.title %>" maxlength='100' tabindex="1" />
 	</div>
 	
 	<div class="field text">
-		<label for="username">Username:</label>
+		<label for="username"><%= t("username") %>:</label>
 		<input id="username" name="entry[username]" value="<%= @entry.username %>" maxlength='110' tabindex="2" autocomplete="off" />
 	</div>
 	
 	<div class="field text">
-    <label for="password">Password <em>(<a href="javascript:void(0);" id="generate_password">Generate</a>)</em>:</label>  
+    <label for="password"><%= t("password") %> <em>(<a href="javascript:void(0);" id="generate_password">Generate</a>)</em>:</label>  
 		<input id="password" name="entry[password]" value="<%= @entry.password %>" maxlength='40' tabindex="3" autocomplete="off" />
 	</div>
 	
 	<div class="field text">
-		<label for="password_confirmation">Confirm Password:</label>
+		<label for="password_confirmation"><%= t("confirm_password") %>:</label>
 		<input  id="password_confirmation" name="entry[password_confirmation]" value="<%= @entry.password_confirmation %>" maxlength='40' tabindex="4" />
 	</div>
 	
@@ -27,15 +27,15 @@
 	</div>
 	
 	<div class="field text">
-		<label for="notes">Notes:</label>
+		<label for="notes"><%= t("notes") %>:</label>
 		<textarea id="notes" name="entry[description]" cols="30" rows="30" tabindex="6"><%= @entry.description %></textarea>
 	</div>
 	<div class="field">
 	<% if current_user.is_admin == false  %>
 		<input type="hidden" name="entry[group_id]" value="<%= @entry.group_id %>" />
-		<label for="entry">Group:<span class="fakeLabel"><%= @entry.group.title %></span></label>
+		<label for="entry"><%= t("group") %>:<span class="fakeLabel"><%= @entry.group.title %></span></label>
 	<% else %>	
-		<label for="entry">Group:</label>
+		<label for="entry"><%= t("group") %>:</label>
 		<select id="entry" name="entry[group_id]"  tabindex="7">
 		  <%= options_for_select(@groups, @entry.group_id) %>
 		</select>

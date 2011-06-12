@@ -1,6 +1,6 @@
 <!-- #content_body -->
 <div id="content_body">
-	<h1>Edit Group</h1>
+	<h1><%= t("edit_group") %></h1>
 	<div class="edit_group">
 		<%= form_tag group_url(@group), :method => "put" do %>
 			<%= error_messages_for :group %>

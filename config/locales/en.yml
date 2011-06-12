@@ -21,3 +21,16 @@ en:
   user_edit_form: User Edit Form
   edit_account: Edit Account
   create_new_user: Create a new user
+  title: Title
+  username: Username
+  confirm_password: Confirm Password
+  notes: Notes
+  group: Group
+  new_entry: New Entry
+  edit_entry: Edit Entry
+  delete_this_entry: Delete this entry
+  new_group: New Group
+  cancel: Cancel
+  create: Create
+  parent_group: Parent Group
+  edit_group: Edit Group

@@ -2,7 +2,7 @@
   <%= javascript_include_tag "password_generator" %>
 <% end %>
 
-<h1>New Entry</h1>
+<h1><%= t("new_entry") %></h1>
 
 <%= form_tag entries_url do %>
   <%= error_messages_for :entry %>

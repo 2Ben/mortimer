@@ -2,7 +2,7 @@ fr:
   passwords: Mots de passe
   password: Mot de passe
   add_entry: Ajouter un mot de passe
-  add_group: Ajouter un groupe
+  add_group: Ajouter une Catégorie
   users: Utilisateurs
   add_user: Ajouter un utilisateur
   edit: modifier
@@ -18,3 +18,16 @@ fr:
   user_edit_form: Edition du profil
   edit_account: Edition du profil
   create_new_user: Créer un utilisateur
+  title: Titre
+  username: Nom
+  confirm_password: Confirmer le mot de passe
+  notes: Informations complémentaire
+  group: Catégorie
+  new_entry: Nouveau Mot de passe
+  edit_entry: Editer le Mot de passe
+  delete_this_entry: Supprimer ce mot de passe
+  new_group: Nouvelle Catégorie
+  cancel: Annuler
+  create: Créer
+  parent_group: Catégorie Parente
+  edit_group: Edition de la catégorie
