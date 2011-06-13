@@ -8,7 +8,7 @@
 		  </span>
 		
 			<% if @entry.allows_write_access_for?(current_user) %>
-			<em>(<a href="<%= edit_entry_url(@entry) %>">edit / delete</a>)</em>
+			<em>(<a href="<%= edit_entry_url(@entry) %>"><%= t("edit") %> / <%= t("delete") %> </a>)</em>
 			<% end %>
 		</h2>
 	</div>
