@@ -1,13 +1,16 @@
 <ol class="listing_toggle passwords">
 		<% Entry.tag_counts.each do |tag| %>
-			<li class="header clear">
-        <% entries = Entry.tagged_with(tag.name) %>
-				<%= render :partial => "tags/tag_title", :locals => {:tag => tag, :entries => entries} %>
+      <% entries = Entry.tagged_with(tag.name) %>
+      <% if entries %>
+        <li class="header clear">
+          <% entries = Entry.tagged_with(tag.name) %>
+          <%= render :partial => "tags/tag_title", :locals => {:tag => tag, :entries => entries} %>
 
-        <ol class="slideable clear" style="display:none;">
-					<%= render :partial => "groups/entry", :collection => entries %>
-				</ol>
-			</li>
+          <ol class="slideable clear" style="display:none;">
+            <%= render :partial => "groups/entry", :collection => entries %>
+          </ol>
+        </li>
+      <% end %>
 		<% end %>
 </ol>
 	

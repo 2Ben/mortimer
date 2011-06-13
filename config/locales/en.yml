@@ -26,6 +26,7 @@ en:
   confirm_password: Confirm Password
   notes: Notes
   group: Group
+  groups: Groups
   new_entry: New Entry
   edit_entry: Edit Entry
   delete_this_entry: Delete this entry
@@ -34,3 +35,4 @@ en:
   create: Create
   parent_group: Parent Group
   edit_group: Edit Group
+  tags: Tags

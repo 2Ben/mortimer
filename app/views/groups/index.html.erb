@@ -7,8 +7,8 @@
 	<h1><%= t("passwords") %></h1>
   <div id="group_menu">
     <ul>
-      <li><%= link_to(t("group"),"#tabs1") %></li>
-      <li><%= link_to(t("tag"),"#tabs2") %></li>
+      <li><%= link_to(t("groups"),"#tabs1") %></li>
+      <li><%= link_to(t("tags"),"#tabs2") %></li>
     </ul>
     <div id="tabs1">
       <%= render :partial => "groups/group.html.erb", :locals => {:groups => @groups, :parent_group => nil, :level => 0, } %>

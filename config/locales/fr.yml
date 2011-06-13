@@ -23,6 +23,7 @@ fr:
   confirm_password: Confirmer le mot de passe
   notes: Informations complémentaire
   group: Catégorie
+  groups: Catégories
   new_entry: Nouveau Mot de passe
   edit_entry: Editer le Mot de passe
   delete_this_entry: Supprimer ce mot de passe
@@ -31,3 +32,4 @@ fr:
   create: Créer
   parent_group: Catégorie Parente
   edit_group: Edition de la catégorie
+  tags: Tags
