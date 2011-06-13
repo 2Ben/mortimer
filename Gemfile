@@ -5,6 +5,9 @@ gem 'sentry'
 gem 'aasm'
 gem 'highline'
 gem 'settingslogic'
+gem 'acts-as-taggable-on'
+gem "jquery-rails"
+gem 'formtastic', '2.0.0.rc1'
 
 group :development, :test do
   gem 'shoulda', :require => 'shoulda/rails'

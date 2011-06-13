@@ -142,8 +142,8 @@ p {
 	}
 	#content #content_body {
 		float: left;
-		width: 440px;
-		margin: 0 50px 0 0;
+		width: 490px;
+		margin: 0 10px 0 0;
 		position: relative;
 	}
 	#content #content_bottom {
@@ -354,7 +354,7 @@ fieldset.common {}
 	
 /* tabs
 ----------------------------------------------------------------------------------------*/
-.toggle { margin: 0 0 -1px 0; }
+/*.toggle { margin: 0 0 -1px 0; }
 	.toggle li {
 		float: left;
 		font-size: 2.6em;
@@ -396,7 +396,7 @@ fieldset.common {}
 	position: relative;
 	z-index: 1;
 }	
-.tab_content.active { display: block; }
+.tab_content.active { display: block; }*/
 
 /* ol/ul.listing_toggle
 ----------------------------------------------------------------------------------------*/
@@ -481,13 +481,13 @@ fieldset.common {}
 	_background: none;
 	padding: 23px 0 0 0;
 }
-	.overlay .overlay_content {
+	/*.overlay .overlay_content {
 		background: url(/images/bg/bg_overlay_content.png) no-repeat left bottom;
 		_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/bg/bg_overlay_content.png', sizingMethod='scale');
 		_background: none;
 		zoom: 1;
 		padding: 0 30px 28px 30px
-	}
+	}*/
 	.overlay h2 { 
 		margin: 0 0 15px 0; 
 		font-size: 2.2em;
@@ -521,7 +521,7 @@ fieldset.common {}
 			color: #000;
 			font-size: 1.6em;	
 			float: left;
-			width: 100px;
+			width: 150px;
 			padding: 0 0 8px 0;
 		}
 		.overlay dl dd {

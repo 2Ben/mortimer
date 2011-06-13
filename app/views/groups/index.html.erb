@@ -1,7 +1,23 @@
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "group.js" %>
+<% end %>
+
 <!-- #content_body -->
 <div id="content_body">
 	<h1><%= t("passwords") %></h1>
-  <%= render :partial => "groups/group.html.erb", :locals => {:groups => @groups, :parent_group => nil, :level => 0, } %>
+  <div id="group_menu">
+    <ul>
+      <li><%= link_to(t("group"),"#tabs1") %></li>
+      <li><%= link_to(t("tag"),"#tabs2") %></li>
+    </ul>
+    <div id="tabs1">
+      <%= render :partial => "groups/group.html.erb", :locals => {:groups => @groups, :parent_group => nil, :level => 0, } %>
+    </div>
+    <div id="tabs2">
+      <%= render :partial => "tags/tags.html.erb" %>
+    </div>
+  </div>
+
 </div>
 <!-- /#content_body -->
 
@@ -16,7 +32,7 @@
         <ul class="listing_common">
           <% unless @groups.blank? %>
           <li><a href="<%= new_entry_url %>" class="icon add"><%= t("add_entry") %></a></li>
-          <% end %>  
+          <% end %>
           <li class="last"><a href="<%= new_group_url %>" class="icon add"><%= t("add_group") %></a></li>
         </ul>
       </div>

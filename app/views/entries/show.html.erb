@@ -14,10 +14,10 @@
 	</div>
 	
 	<dl class="clear">
-		<dt>Title:</dt>
+		<dt><%= t("title") %>:</dt>
 		<dd><%= @entry.title %></dd>
 
-		<dt>Username:</dt>
+		<dt><%= t("username") %>:</dt>
 		<dd>
 		<% if @entry.username.size > 35 %>
 			<%= @entry.username[0..30] + "<br />" + @entry.username[30..-1]  %>
@@ -26,7 +26,7 @@
 		<%end%>
 		</dd>
 
-		<dt>Password:</dt>
+		<dt><%= t("password") %>:</dt>
     <dd id="password_container">
       <a href="javascript:void(0);">View</a>
     </dd>
@@ -37,12 +37,11 @@
 		<% end %>
 
 		<% unless @entry.description.blank? %>
-		<dt>Notes:</dt>
+		<dt><%= t("notes") %>:</dt>
 		<dd><%= @entry.description %></dd>
 		<% end %>
 		
 		<span class="hidden"><input value="<%= @entry.password %>"  id="hidden_password" class="hidden" /></span>
 	</dl>
 
-	<p>[Ctrl-C] or [Cmd-C] will copy the password to the clipboard.<br/>Click outside the box to close.</p>
 </div>

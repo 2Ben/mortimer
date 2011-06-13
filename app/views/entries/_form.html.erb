@@ -30,6 +30,12 @@
 		<label for="notes"><%= t("notes") %>:</label>
 		<textarea id="notes" name="entry[description]" cols="30" rows="30" tabindex="6"><%= @entry.description %></textarea>
 	</div>
+
+	<div class="field text">
+		<label for="tags"><%= t("tags") %>:</label>
+	  <input id="tags" name="entry[tag_list]" value="<%= @entry.tag_list %>" maxlength='110' tabindex="5" />
+	</div>
+  
 	<div class="field">
 	<% if current_user.is_admin == false  %>
 		<input type="hidden" name="entry[group_id]" value="<%= @entry.group_id %>" />

@@ -1,6 +1,10 @@
 class Entry < ActiveRecord::Base
   include AttributeEncrypter 
 
+  #add tags to password
+  acts_as_taggable
+  acts_as_taggable_on :tags
+
   belongs_to :group
  
   # has_crypted_attribute defines attributes

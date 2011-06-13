@@ -8,7 +8,7 @@ class EntriesController < ApplicationController
   before_filter :write_permissions_on_new,   :only => [:new, :create]
 
   # Make sure that the show command can only be executed via xhr.
-  verify :xhr => true, :only => :show, :add_flash => {:notice => "Sorry, Charile :)"}, :redirect_to => "/" 
+#  verify :xhr => true, :only => :show, :add_flash => {:notice => "Sorry, Charile :)"}, :redirect_to => "/"
 
   # Find entries and get groups for the appropriate actions.
   before_filter :find_entry, :only => [:show, :edit, :update, :destroy]

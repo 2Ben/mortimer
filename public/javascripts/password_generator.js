@@ -1,4 +1,4 @@
-var PasswordGenerator = function(generatorLink, inputElements) {
+/*var PasswordGenerator = function(generatorLink, inputElements) {
   this.generatorLink    = generatorLink;
   this.fieldsToPopulate = inputElements;
   this.lowerAlpha       = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -26,7 +26,7 @@ PasswordGenerator.prototype = {
 
   // Return a random string of 8-10 characters.
   generateRandomPassword: function() {
-    var newPassword = [];     
+    var newPassword = [];
     var passwordLength = Math.floor(Math.random() * 3 + 8);
     for(i=0; i<=passwordLength; i++) {
       newPassword.push(this.randomCharacter());
@@ -38,7 +38,7 @@ PasswordGenerator.prototype = {
   // Returns a random character, with a 70% change of being an upper- or lowercase letter
   // and a 30% chance of being a number or alternate character.
   randomCharacter: function() {
-    var random        = Math.random(); 
+    var random        = Math.random();
     var characterType = 0;
     if(random > 0.3) {
       characterType = (Math.random()) > 0.3 ? 0 : 1;
@@ -55,7 +55,39 @@ PasswordGenerator.prototype = {
 };
 
 document.observe("dom:loaded", function() {
-  
+
   var generator = new PasswordGenerator($('generate_password'), [$('password'), $('password_confirmation')]);
 
+});*/
+
+$.extend({
+  password: function (length, special) {
+    var iteration = 0;
+    var password = "";
+    var randomNumber;
+    if(special == undefined){
+        var special = false;
+    }
+    while(iteration < length){
+        randomNumber = (Math.floor((Math.random() * 100)) % 94) + 33;
+        if(!special){
+            if ((randomNumber >=33) && (randomNumber <=47)) { continue; }
+            if ((randomNumber >=58) && (randomNumber <=64)) { continue; }
+            if ((randomNumber >=91) && (randomNumber <=96)) { continue; }
+            if ((randomNumber >=123) && (randomNumber <=126)) { continue; }
+        }
+        iteration++;
+        password += String.fromCharCode(randomNumber);
+    }
+    return password;
+  }
 });
+
+$(document).ready(function(){
+  $("#generate_password").click(function(){
+    var password = $.password(8);
+    $("#password").val(password);
+    $("#password_confirmation").val(password);
+  });
+});
+
