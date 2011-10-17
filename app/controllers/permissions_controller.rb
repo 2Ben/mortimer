@@ -28,7 +28,7 @@ class PermissionsController < ApplicationController
 	@permission = @user.permissions.create(params[:permission])
 	respond_to do |format|
 	  if @permission.save
-		format.html	{ redirect_to(users_url)}
+		format.html	{ redirect_to( edit_user_url(@user, :anchor => "tabs2") )}
 		format.xml	{ render :xml => @permission, :status => :created, :location => @permission }
 	  else
 		format.html { render :action => "new" }
@@ -44,7 +44,7 @@ class PermissionsController < ApplicationController
 	@permission.destroy
     @user.reload
 	respond_to do |format|
-	  format.html	{ redirect_to(users_url) }
+	  format.html	{ redirect_to( edit_user_url(@user, :anchor => "tabs2") ) }
 	  format.js		{ @current_permission = @permission }
  	  format.xml	{ render :xml => @permission, :status => :destroyed, :location => @permission }
 	end
