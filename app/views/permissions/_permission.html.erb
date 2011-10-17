@@ -1,6 +1,3 @@
 <li>
-  <%= permission.group.title_with_parents %>
-  <%= permission.mode %>
-  (<%= link_to "remove", permission_url(permission, :user_id => @user.id), 
-    :remote => true, :method => :delete, :update => "permissions" %>)
+  <%= permission.group.title_with_parents %><%= permission.mode %>(<%= button_to "-", permission_url(permission, :user_id => @user.id), :remote => true, :method => :delete %>)
 </li>
